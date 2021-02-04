@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlers.MainController">
+   <children>
+      <HBox alignment="TOP_CENTER" maxHeight="200.0" prefHeight="70.0" prefWidth="150.0">
+         <children>
+            <Button fx:id="btnAdd" mnemonicParsing="false" onAction="#actionButtonPressed" text="Добавить">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnEdit" mnemonicParsing="false" onAction="#actionButtonPressed" text="Изменить">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#actionButtonPressed" text="Удалить">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#actionButtonPressed" text="Сохранить">
+               <HBox.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <AnchorPane prefHeight="450.0" prefWidth="950.0">
+         <children>
+            <TableView fx:id="tableWasted" prefHeight="400.0" prefWidth="900.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                  <TableColumn fx:id="columnCodeWaste" prefWidth="100.0" text="Код отхода" />
+                  <TableColumn fx:id="columnNameWaste" prefWidth="100.0" text="Наименование" />
+                  <TableColumn fx:id="columnDegreeOfDanger" prefWidth="150.0" text="Степень опасности" />
+                  <TableColumn fx:id="columnHazardClass" minWidth="0.0" prefWidth="150.0" text="Класс опасности" />
+                  <TableColumn fx:id="columnKindOfActivity" prefWidth="200.0" text="Вид деятельности" />
+                  <TableColumn fx:id="columnEducationStandard" minWidth="9.0" prefWidth="200.0" text="Норматив образования" />
+              </columns>
+            </TableView>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </AnchorPane>
+   </children>
+</VBox>
